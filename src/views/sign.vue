@@ -23,9 +23,9 @@
             <input type="password" name="rePassword" class="rounded shadow-md w-full py-2 px-3 border border-indigo-800 text-gray-700 focus:border-none" placeholder="*************"/>
 
         </div>
-        <div class="flex items-center justify-between mb-4">
+        <div class="sm:flex items-center sm:justify-between mb-4">
             <button class="bg-indigo-800 rounded py-2 px-4 hover:bg-indigo-900 text-white font-bold shadow-lg">Sign Up</button>
-            <router-link to="/"><a class="inline-block font-bold text-indigo-900 text-md hover:text-indigo-800">Already have an account?</a></router-link>
+            <router-link to="/"><a class=" block mt-2 sm:inline-block font-bold text-indigo-900 text-md hover:text-indigo-800">Already have an account?</a></router-link>
         </div>
     </form>
     </div>

@@ -12,9 +12,9 @@
                     <input type="password" name="password" placeholder="********" class="rounded shadow-md w-full py-2 px-3 border border-indigo-800 text-gray-700 focus:border-none">
 
                 </div>
-                <div class="mb-4 flex justify-between items-center">
+                <div class="mb-4 sm:flex sm:justify-between items-center">
                     <button class="bg-indigo-800 py-2 px-4 text-white font-bold shadow-lg rounded hover:bg-indigo-900 ">Login</button>
-                    <router-link to="sign"><span class="inline-block font-bold text-indigo-900 text-md hover:text-indigo-800 ">New user? Sign up.</span></router-link>
+                    <router-link to="sign"><span class=" block mt-2 sm:inline-block font-bold text-indigo-900 text-md hover:text-indigo-800 ">New user? Sign up.</span></router-link>
                     
                 </div>
             </form>
