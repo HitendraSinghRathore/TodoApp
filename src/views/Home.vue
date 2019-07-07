@@ -17,7 +17,7 @@
 
 </div>
 </div>
-<div class="logo m-5 absolute text-center top-0 sm:left-0 text-white text-l sm:text-2xl font-extrabold sm:text-indigo-800">TO DO LIST</div>
+<div class="logo m-5 absolute text-center top-0 sm:left-0 text-white text-l sm:text-2xl font-extrabold sm:text-indigo-800">TO DO APP</div>
 
 </div>
 </template>
@@ -52,7 +52,7 @@ h3 {
 }
 
 .description{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
   margin-top: 10vh
 }
 @media(min-width:640px){
