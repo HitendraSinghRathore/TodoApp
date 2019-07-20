@@ -40,11 +40,7 @@ export default {
 <style scoped>
 .card{
         margin-top:10vh;
-        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+        
 
     }
     @media(max-width:640px){
