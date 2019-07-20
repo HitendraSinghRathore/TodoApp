@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import login from './views/login.vue'
 import signup from './views/sign.vue'
+import tasks from './views/tasks.vue'
+import add from './views/Add.vue'
+import taskList from './views/TaskList.vue'
 
 Vue.use(Router)
 
@@ -29,6 +32,18 @@ export default new Router({
             // which is lazy-loaded when the route is visited.
             component: () =>
                 import ( /* webpackChunkName: "about" */ './views/About.vue')
+        },
+        {
+            path: '/tasks',
+            name: 'tasks',
+            component: tasks,
+            children: [{
+                path: "",
+                component: taskList
+            }, {
+                path: 'add',
+                component: add
+            }]
         }
     ]
 })
