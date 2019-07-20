@@ -7,7 +7,7 @@
         </div>
         <div class="taskList mt-4">
             <div class="tasks">
-                <div class="shadow-md mx-auto mb-2 w-7/8 flex py-1">
+                <div class="shadow mx-auto mb-2 w-7/8 flex py-1">
                 <div class="checkbox w-auto mx-2 mt-2 ">
 				    <input type="checkbox" id="check1" >
 				    <label for="check1"></label>
@@ -18,8 +18,8 @@
              <div class="tasks">
                 <div class="shadow-md mx-auto mb-2 w-7/8 flex py-1">
                 <div class="checkbox w-auto mx-2 mt-2 ">
-				    <input type="checkbox" id="check1" >
-				    <label for="check1"></label>
+				    <input type="checkbox" id="check2" >
+				    <label for="check2"></label>
 				</div>
                 <div class="font-thin my-auto">Test Txt</div>
                 </div>
