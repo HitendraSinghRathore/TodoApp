@@ -12,14 +12,16 @@ Vue.use(Router)
 export default new Router({
     routes: [{
             path: '/',
-            name: 'home',
+
             component: Home,
             children: [{
                     path: '',
+                    name: 'home',
                     component: login
                 },
                 {
                     path: 'sign',
+                    name: 'sign',
                     component: signup
                 }
             ]
@@ -35,13 +37,15 @@ export default new Router({
         },
         {
             path: '/tasks',
-            name: 'tasks',
+
             component: tasks,
             children: [{
                 path: "",
+                name: 'tasks',
                 component: taskList
             }, {
                 path: 'add',
+                name: 'add',
                 component: add
             }]
         }

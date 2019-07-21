@@ -38,9 +38,7 @@ export default {
 }
 </script>
 <style scoped>
-.list{
-  font-family: 'Roboto', sans-serif;
-}
+
 .checkbox {
     display: inline-block;
     margin-right: 8px;
