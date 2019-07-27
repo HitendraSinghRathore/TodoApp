@@ -1,6 +1,9 @@
 <template>
     <div>
        <div class="card  w-full sm:w-4/5 bg-white rounded shadow-xl mx-auto mb-5 p-4">
+       
+       
+       <div >
             <h4 class="text-center text-xl mb-4"> Login</h4>
             
                 <div class="mb-4">
@@ -13,11 +16,16 @@
 
                 </div>
                 <div v-if="message" class="text-red-600 text-center mb-1 text-bold " >{{message}}</div>
+                <div v-if="loading" class="h-full w-full text-center">
+
+           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+       </div>
                 <div class="mb-4 sm:flex sm:justify-between items-center">
                     <button class="bg-indigo-800 py-2 px-4 text-white font-bold shadow-lg rounded hover:bg-indigo-900 " v-on:click="loginUser">Login</button>
                     <router-link to="sign"><span class=" block mt-2 sm:inline-block font-bold text-indigo-900 text-md hover:text-indigo-800 ">New user? Sign up.</span></router-link>
                     
                 </div>
+       </div>
             
         </div> 
     </div>
@@ -32,15 +40,18 @@ export default {
            
                userName:null,
                password:null,        
-                message : null
+                message : null,
+                loading:false
        }
    },
    mounted : function(){
-      
+      if(localStorage.id!=undefined)
+      this.$router.push({path:'/tasks'})
    }
    ,
     methods :{
         loginUser : function(){
+            this.loading = true;
            if(this.userName==null||this.userName ==""||this.password==null||this.password==""){
                this.message = "Please fill all the details required."
 
@@ -55,7 +66,7 @@ export default {
                .then((response) =>{
                    
                    let userData = response.data;
-                   
+                   this.loading = false;
                  
                        this.message = null;
                        localStorage.id = userData.data._id;
@@ -65,7 +76,8 @@ export default {
                        
                    
                }).catch((error) =>{
-                   let errorObj = error.response.data;
+                  this.loading = false;
+                   let errorObj = error.response.data;                    
                     this.message = errorObj.message;
                     this.userName = null;
                     this.password = null; 

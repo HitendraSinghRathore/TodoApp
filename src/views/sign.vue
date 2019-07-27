@@ -24,6 +24,10 @@
 
         </div>
         <div v-if="message" v-bind:class="{'text-green-600':!error,'text-red-600':error}" class="text-center mb-1 text-bold">{{message}}</div>
+        <div v-if="loading" class="h-full w-full text-center">
+
+           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+       </div>
         <div class="sm:flex items-center sm:justify-between mb-4">
             <button v-on:click="signIn" class="bg-indigo-800 rounded py-2 px-4 hover:bg-indigo-900 text-white font-bold shadow-lg">Sign Up</button>
             <router-link to="/"><a class=" block mt-2 sm:inline-block font-bold text-indigo-900 text-md hover:text-indigo-800">Already have an account?</a></router-link>
@@ -45,11 +49,13 @@ export default {
             password:null,
             rePassword:null,
             message:null,
-            error:false
+            error:false,
+            loading:false
         }
     },
     methods:{
         signIn: function(){
+            this.loading = true;
             if(!this.displayName||!this.userName||!this.password){
                 this.error = true;
                 this.message = "Please fill all mandatory fields."
@@ -75,6 +81,7 @@ export default {
                     this.userName = null;
                     this.rePassword = null;
                     this.password = null;
+                    this.loading = false;
                 }).catch((error)=>{
                     this.message = error.response.data.message;
                     this.error = true;
@@ -82,6 +89,7 @@ export default {
                     this.userName = null;
                     this.rePassword = null;
                     this.password = null;
+                    this.loading = false;
                 })
             }
 
