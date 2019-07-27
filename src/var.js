@@ -1,3 +1,3 @@
 export default {
-    path: "http://localhost:3333/api/"
+    path: "https://vueapitodo.herokuapp.com/api/"
 }
